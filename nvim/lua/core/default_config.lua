@@ -10,10 +10,10 @@ M.ui = {
   hl_add = {},
   hl_override = {},
   changed_themes = {},
-  theme_toggle = { "onedark", "dark_horizon" },
-  theme = "pinerose", -- default theme
+  theme_toggle = { "rosepine", "dark_horizon" },
+  theme = "rosepine", -- default theme
   transparency = true,
-  lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
+  lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
   -- https://github.com/NvChad/base46/tree/v2.0/lua/base46/extended_integrations
   extended_integrations = {}, -- these aren't compiled by default, ex: "alpha", "notify"
@@ -23,7 +23,7 @@ M.ui = {
     icons = true,
     lspkind_text = true,
     style = "default", -- default/flat_light/flat_dark/atom/atom_colored
-    border_color = "grey_fg", -- only applicable for "default" style, use color names from base30 variables
+    border_color = "default", -- only applicable for "default" style,( "grey_fg",) use color names from base30 variables
     selected_item_bg = "colored", -- colored / simple
   },
 
@@ -31,7 +31,7 @@ M.ui = {
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "default",
@@ -48,7 +48,7 @@ M.ui = {
 
   -- nvdash (dashboard)
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = false,
 
     header = {
       "           ▄ ▄                   ",
